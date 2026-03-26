@@ -29,11 +29,6 @@ _RE_VTT_HEADER = re.compile(
 # VTT cue identifiers (optional text label before a timestamp line).
 _RE_VTT_CUE_ID = re.compile(r"^[^\n]+\n(?=\d{2}:\d{2})", re.MULTILINE)
 
-# ASS / SSA section headers and metadata lines.
-_RE_ASS_SECTION = re.compile(
-    r"^\[.*?\]\s*\n(.*?\n)*?(?=\[|\Z)",
-    re.MULTILINE | re.DOTALL,
-)
 # ASS "Dialogue:" lines – extract only the text component (field 10+).
 _RE_ASS_DIALOGUE = re.compile(
     r"^(?:Dialogue|Comment):.*?,.*?,.*?,.*?,.*?,.*?,.*?,.*?,.*?,(.*)",
