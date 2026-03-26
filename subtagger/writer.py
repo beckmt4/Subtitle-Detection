@@ -37,7 +37,7 @@ def _write_mkv(path: Path, stream_index: int, lang: str, dry_run: bool) -> bool:
     cmd = [
         "mkvpropedit",
         str(path),
-        "--edit", f"track:s{stream_index + 1}",  # mkvpropedit uses 1-based subtitle track number
+        "--edit", f"track:s{stream_index + 1}",  # mkvpropedit uses 1-based track selector (0-based stream_index + 1)
         "--set", f"language={lang}",
     ]
 

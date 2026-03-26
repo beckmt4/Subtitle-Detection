@@ -8,7 +8,7 @@
 
 - 🔍 **Recursive directory scanning** for `.mkv`, `.mp4`, `.srt`, `.ass`, `.ssa`, `.vtt` files
 - 🧠 **Multi-engine language detection** using [lingua](https://github.com/pemistahl/lingua-py) (primary) and [langdetect](https://github.com/Mimino666/langdetect) (fallback)
-- 🎤 **Whisper audio fallback** — when subtitle text is absent or too short, transcribes audio via [faster-whisper](https://github.com/guillaumeklebs/faster-whisper)
+- 🎤 **Whisper audio fallback** — when subtitle text is absent or too short, transcribes audio via [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
 - 🤖 **Ollama LLM adjudication** — forwards uncertain samples to a local LLM for conservative, explainable decisions
 - 🏷️ **Non-destructive tagging**:
   - `.mkv` — uses `mkvpropedit` (no re-encode)
