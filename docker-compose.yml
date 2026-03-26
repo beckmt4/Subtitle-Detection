@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  subtagger:
+    build: .
+    container_name: subtagger
+    volumes:
+      - /mnt/user/media:/media:ro
+      - ./config:/config
+      - ./logs:/logs
+    environment:
+      - SUBTAGGER_CONFIG=/config/config.yml
+      - SUBTAGGER_LOG_LEVEL=INFO
+    restart: unless-stopped

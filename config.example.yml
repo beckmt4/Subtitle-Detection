@@ -1,0 +1,30 @@
+scan_paths:
+  - /media/movies
+  - /media/tv
+
+include_extensions:
+  - .mkv
+  - .mp4
+  - .srt
+  - .ass
+  - .ssa
+  - .vtt
+
+exclude_patterns:
+  - "*/sample/*"
+  - "*/extras/*"
+  - "*trailer*"
+
+dry_run: false
+report_only: false
+min_confidence: 0.85
+min_text_length: 50
+use_whisper_fallback: false
+use_ollama: false
+ollama_url: "http://localhost:11434"
+ollama_model: "llama3"
+whisper_model: "base"
+audit_log_path: "/logs/subtagger_audit.db"
+log_level: "INFO"
+watch_mode: false
+watch_interval: 3600
