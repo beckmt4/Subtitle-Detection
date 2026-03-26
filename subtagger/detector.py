@@ -94,9 +94,6 @@ _LANG_MAP: dict[str, tuple[str, str]] = {
     "zulu": ("zu", "zul"),
 }
 
-_UNKNOWN = DetectionResult = None  # forward reference – defined below
-
-
 @dataclass
 class DetectionResult:
     """Result of a language detection attempt."""
@@ -235,7 +232,7 @@ def _detect_with_langdetect(text: str, min_confidence: float) -> DetectionResult
                 break
 
         if lang_name == "unknown":
-            iso2 = iso1  # best we can do
+            iso2 = "und"
 
         return DetectionResult(
             language_name=lang_name,
